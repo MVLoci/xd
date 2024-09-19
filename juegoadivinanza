@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+#include <cstdlib>
+using namespace std;
+int main(){
+    srand((unsigned)time(NULL));
+    int num,n;
+    system("clear");
+    cout<<"*"<<endl;
+    cout<<"*Bienvenido al juego de la adivinanza"<<endl;
+    cout<<"*"<<endl;
+    cout<<"El rango es de 1-10"<<endl;
+    num=rand()%10+1;
+    cout<<"Trata de adivinar el numero secreto"<<endl;
+    cin>>n;
+    while(n!=num){
+        system("clear");
+        if(num>n){
+            cout<<"El numero secreto es mayor a "<<n<<endl;
+        }else{
+            cout<<"El numero secreto es menor a "<<n<<endl;
+        }
+        cout<<"Vuelve a intentar"<<endl;
+        cin>>n;
+    }
+    cout<<"Felicidades lo lograste"<<endl;
+return 0;
+}
